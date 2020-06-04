@@ -1,0 +1,193 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Панель администратора | Курьер56</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+
+    <!-- All css files are included here. -->
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Owl Carousel main css -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="css/core.css">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="css/shortcode/shortcodes.css">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- User style -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <script src="js/edit_cookie.js"></script>
+    <script src="js/exit_page.js"></script>
+    <!-- Modernizr JS -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script> 
+</head>
+
+
+<body>
+    <!-- Body main wrapper start -->
+    <div class="wrapper fixed__footer">
+        <!-- Start Header Style -->
+        <header id="header" class="htc-header">
+            <!-- Start Mainmenu Area -->
+            <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-lg-2 col-sm-3 col-xs-3">
+                            <div class="logo" style="margin-left: -48px;">
+                                <a href="index_log.html">
+                                    <h1>Курьер56</h1>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Start MAinmenu Ares -->
+                        <div class="col-md-8 col-lg-8 col-sm-6 col-xs-6">
+                            <div class="mobile-menu clearfix visible-xs visible-sm">
+                                <nav id="mobile_dropdown">
+                                    <ul>
+                                        <li><a href="index_log.html">Главная</a></li>
+                                        <li><a>Работа с товаром</a>
+                                            <ul style="display: none;">
+                                                <li><a href="create_tovar.html">Добавить товар</a></li>
+                                                <li><a href="del_tovar.html">Удалить товар</a></li>
+                                                <li><a href="edit_tovar.html">Просмотреть товар</a></li>
+                                                <li><a href="create_categories.html">Добавить категорию</a></li>
+                                                <li><a href="del_categories.html">Удалить категорию</a></li>
+                                                <li><a href="edit_categories.html">Просмотреть категории</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a>Работа с кадрами</a>
+                                            <ul style="display: none;">
+                                                <li><a href="regist_del_admin.html">Добавление и удаление администратора</a></li>
+                                                <li><a href="create_del_position.html">Добавление и удаление должности</a></li>
+                                                <li><a href="create_del_employee.html">Добавление и удаление сотрудников</a></li> 
+                                            </ul>
+                                        </li>
+                                        <li><a href="edit_value_order.html">Редактирование стоимости доставки</a></li>
+                                        <li><a href="edit_graph.html">Редактирование графика работы</a></li>
+                                        <li><a href="edit_data.html">Редактировать данные в приложение клиента</a></li>
+                                    </ul>
+                                </nav>
+                            </div>                          
+                        </div>
+                        <!-- End MAinmenu Ares -->
+                        <div class="col-md-2 col-sm-4 col-xs-3">  
+                            <ul class="menu-extra">
+                              
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mobile-menu-area"></div>
+                </div>
+            </div>
+            <!-- End Mainmenu Area -->
+        </header>
+        <!-- End Header Style -->
+        
+        <div class="body__overlay"></div>
+       
+        <!-- Start Our Product Area -->
+        <section class="htc__product__area ptb--130 bg__white" style="margin-top: 0px;">
+            <div class="container">
+                <div class="htc__product__container">
+                    <div class="row">
+                        <div class="product__list">
+                            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                                <h1 class="h2">Добавление новой должности</h1>
+                              </div>
+                                
+                              <form method="post" id="new_position" enctype="multipart/form-data">
+                              <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="name">Название</label>
+                              <input id="name" type="text" class="form-control" name="namen" placeholder="Название">
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group" style="margin-left: 15px;">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">Описание</span>
+                                </div>
+                                <textarea id="opis" name="description" class="form-control" aria-label="Описание" cols="60" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="select-box">
+                                <label for="select-box1" class="label select-box1"><span class="label-desc">Выберите полномочия</span> </label>
+                                <select name="categ_id" id="select-box1" class="select">
+                                    <option value="2">Работа с клиентами</option>
+                                    <option value="4">Доставка</option>
+                                </select>
+                              </div>
+                          </div>
+                          <a onclick="empty_new_position();" style="margin-top: 29px;" id="new_admin" class="btn btn-primary">Зарегистрировать</a>
+                          </form>
+                          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                            <h1 style="margin-top: 15px;" class="h2">Удаление должности:</h1>
+                          </div>
+
+                          <form method="POST" action="">
+                            <div class="form-group">
+                          <label style="margin-left: -285px;" for="del">Выберите должность:</label>
+                          <div id="del_position" class="col-md-3  col-lg-3 cat--1 col-sm-4 col-xs-12" style="position: inherit;left: 0%;margin-top: 20px;margin-block-end: -100px;">
+                              
+                        </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Our Product Area -->
+       
+        <!-- Start Footer Area -->
+        <footer class="htc__foooter__area" style="background-color: black;">
+            <div class="container">
+                <!-- Start Copyright Area -->
+                <div class="htc__copyright__area">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="copyright__inner">
+                                <div class="copyright">
+                                    <p>© 2019 Все права защищены.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Copyright Area -->
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+    </div>
+    <!-- Body main wrapper end -->
+
+    <!-- jquery latest version -->
+    <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap framework js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All js plugins included in this file. -->
+    <script src="js/plugins.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Waypoints.min.js. -->
+    <script src="js/waypoints.min.js"></script>
+    <!-- Main js file that contents all jQuery plugins activation. -->
+    <script src="js/main.js"></script>
+    <script src="js/jQuery_3.4.1.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/sweetalert.js"></script>
+    <script src="js/create_del_position.js"></script>
+</body>
+
+</html>
