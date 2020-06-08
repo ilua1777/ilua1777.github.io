@@ -1,12 +1,12 @@
 var myUrl='https://salty-plains-22948.herokuapp.com';
 //var myUrl='http://localhost/piceria56pro_backend/public'
-var ViewEmployeeUrl =myUrl+"/employee";
+var ViewEmployeeUrl =myUrl+"/employee/Delivery";
 var employee_graph_est=myUrl+"/graph/employee";
 var SaveEmployeeGraphUrl=myUrl+"/graph/editcreate"
 
 $.ajax({
     url: ViewEmployeeUrl,
-    method: 'GET',
+    method: 'POST',
     success: function (data) {
         if(data.employee!='empty')
         {
