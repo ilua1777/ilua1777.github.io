@@ -15,7 +15,8 @@ $.ajax({
                 $('#employee_select').append('<option value="'+
             item.id+'">'+
             item.f_name+' '+item.i_name+' '+item.o_name+' '+item.birthday+'</option>');
-        });}
+            }
+        });
         }
     }
 });
