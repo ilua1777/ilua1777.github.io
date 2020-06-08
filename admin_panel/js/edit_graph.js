@@ -11,7 +11,7 @@ $.ajax({
         if(data.employee!='empty')
         {
             data.employee.forEach(function(item){
-            if(item.id==4){
+            if(item.id=='4'){
                 $('#employee_select').append('<option value="'+
             item.id+'">'+
             item.f_name+' '+item.i_name+' '+item.o_name+' '+item.birthday+'</option>');
