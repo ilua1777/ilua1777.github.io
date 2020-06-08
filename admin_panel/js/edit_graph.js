@@ -1,6 +1,6 @@
 var myUrl='https://salty-plains-22948.herokuapp.com';
 //var myUrl='http://localhost/piceria56pro_backend/public'
-var ViewEmployeeUrl =myUrl+"/employee";
+var ViewEmployeeUrl =myUrl+"/employee/Delivery";
 var employee_graph_est=myUrl+"/graph/employee";
 var SaveEmployeeGraphUrl=myUrl+"/graph/editcreate"
 
@@ -10,14 +10,10 @@ $.ajax({
     success: function (data) {
         if(data.employee!='empty')
         {
-            data.employee.forEach(function(item){
-            console.log(item.id);
-                if(item.id=='4'){
-                    console.log('yes');
-                $('#employee_select').append('<option value="'+
+            data.employee.forEach(function(item){         
+            $('#employee_select').append('<option value="'+
             item.id+'">'+
             item.f_name+' '+item.i_name+' '+item.o_name+' '+item.birthday+'</option>');
-            }
         });
         }
     }
