@@ -8,9 +8,9 @@ $.ajax({
     url: ViewEmployeeUrl,
     method: 'POST',
     success: function (data) {
-        if(data.employee!='empty')
+        if(data.employee!='error')
         {
-            data.employee.forEach(function(item){         
+            data.status.forEach(function(item){         
             $('#employee_select').append('<option value="'+
             item.id+'">'+
             item.f_name+' '+item.i_name+' '+item.o_name+' '+item.birthday+'</option>');
