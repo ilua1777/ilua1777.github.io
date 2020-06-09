@@ -30,7 +30,7 @@ $.ajax({
                     '<a style="font-size: 20px;text-align: center;margin-left: 85px;" href="">Пожалуйста, для начала зарегистрируйтесь:</a>');
                 $('#regist_start').append('<input id="p_pass" name="p_passn" type="password" placeholder="Повторите пароль">');
                 
-                $('#divclickstyle').append('<a onclick="start_reg();" style="width: 300px;" class="sign" id="reg">Зарегистироваться</a>');     
+                $('#divclickstyle').append('<a onclick="start_reg();" style="width: 300px;" class="sign" id="reg">Зарегистрироваться</a>');     
             }
     }
 })
