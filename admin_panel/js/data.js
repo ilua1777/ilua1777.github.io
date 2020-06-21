@@ -10,7 +10,6 @@ function empty_data()
     var txt2 = $('#ph').val();
     var txt3 = $('#em').val();
     var txt4 = $('#op').val();
-    var txt5 = $('#img').val();
     
     if(txt == '')
     {
@@ -68,19 +67,6 @@ function empty_data()
                       })
                     return false;
                 }
-                else
-                {
-                        if(txt5=="")
-                        {
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Oops...',
-                                text: 'Вы не добавили изображение!',
-                                footer: ''
-                              })
-                            return false;
-                        }
-                }
             }   
         }   
     }
@@ -96,6 +82,8 @@ function empty_data()
         contentType : false,
         success:function(data){
             console.log(data.status);
+            if(data.status == 'success')
+            {
             Swal.fire(
             'Отлично!',
             'Изменения внесены',
@@ -103,6 +91,17 @@ function empty_data()
             ).then(function(){
                 location.reload();
             })
+            }
+            else 
+            {
+                Swal.fire({     
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Вы не добавили изображение!',
+                    footer: ''
+                    })
+                            
+            }
        }
     })
     return false;
