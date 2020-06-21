@@ -10,7 +10,8 @@ function empty_data()
     var txt2 = $('#ph').val();
     var txt3 = $('#em').val();
     var txt4 = $('#op').val();
-
+    var txt5 = $('#img').val();
+    
     if(txt == '')
     {
         Swal.fire({
@@ -66,6 +67,19 @@ function empty_data()
                         footer: ''
                       })
                     return false;
+                }
+                else
+                {
+                        if(txt5=="")
+                        {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'Вы не добавили изображение!',
+                                footer: ''
+                              })
+                            return false;
+                        }
                 }
             }   
         }   
