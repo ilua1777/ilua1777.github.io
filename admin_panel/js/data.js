@@ -81,7 +81,6 @@ function empty_data()
         cache:false,
         contentType : false,
         success:function(data){
-            console.log(data.status);
             if(data.status == 'success')
             {
             Swal.fire(
