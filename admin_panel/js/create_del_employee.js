@@ -164,7 +164,8 @@ $.ajax({
                 $('#Email').val(data.employeeEmail);
                 location.href="#top";
                 $('#link_on').remove();
-                $('#new_employee').append('<a onclick="empty_edit_employee();" style="margin-top: 29px;" class="btn btn-primary">Сохранить</a>');
+                $('#new_employee').html('');
+		$('#new_employee').append('<a onclick="empty_edit_employee();" style="margin-top: 29px;" class="btn btn-primary">Сохранить</a>');
                 $('#new_employee').append('<a onclick="del_employee();" style="margin-top: 29px;" class="btn btn-primary">Удалить сотрудника</a>');
         }
       }
@@ -192,7 +193,7 @@ function empty_edit_employee()
         })
         return false;
     }
-    if(txt4==null)
+    if(txt4=="Выберите:")
     {
         Swal.fire({
             icon: 'error',
