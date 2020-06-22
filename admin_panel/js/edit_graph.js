@@ -33,15 +33,16 @@ employee_select.oninput = function() {
         if(data.status != 'empty')
         {
             var i=0;
-            
+            var date_mas = [];
             data.status.forEach(function(item){
                 var empty_st_t='#time_start'+i+'n';
                 var empty_en_t='#time_end'+i+'n';
+                date_mas[i]=item.data;
                 $(empty_st_t).val(item.time_nach);
                 $(empty_en_t).val(item.time_okonch);
-                $('#date0').val(item.data);
                 i++;
             })
+            $('#date0').val(date_mas[0]);
             var datetype = $('#date0').val()
             var day_1=translate_in_calendar(datetype,1);
             var day_2=translate_in_calendar(datetype,2);
