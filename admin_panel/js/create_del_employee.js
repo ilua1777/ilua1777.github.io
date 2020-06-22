@@ -164,9 +164,10 @@ $.ajax({
                 $('#Email').val(data.employeeEmail);
                 location.href="#top";
                 $('#link_on').remove();
-                $('#new_employee').html('');
-		$('#new_employee').append('<a onclick="empty_edit_employee();" style="margin-top: 29px;" class="btn btn-primary">Сохранить</a>');
-                $('#new_employee').append('<a onclick="del_employee();" style="margin-top: 29px;" class="btn btn-primary">Удалить сотрудника</a>');
+                $('#link_save').remove();
+		$('#link_del').remove();
+		$('#new_employee').append('<a id="link_save" onclick="empty_edit_employee();" style="margin-top: 29px;" class="btn btn-primary">Сохранить</a>');
+                $('#new_employee').append('<a id="link_del" onclick="del_employee();" style="margin-top: 29px;" class="btn btn-primary">Удалить сотрудника</a>');
         }
       }
     });
