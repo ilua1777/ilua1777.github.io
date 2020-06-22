@@ -38,7 +38,7 @@ function empty_new_employee(){
         })
         return false;
     }
-    if(txt4==null)
+    if(txt4=="Выберите:")
     {
         Swal.fire({
             icon: 'error',
