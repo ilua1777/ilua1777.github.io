@@ -13,7 +13,7 @@ $.ajax({
         +  '<div class="product__inner">'+
                 '<div class="pro__thumb">'+
                     '<a id="chek" >'+
-                    '<img src="'+myUrlImage+'/'+item.image_src+'">'+
+                    '<img src="'+item.image_src+'">'+
                     '</a>'+
                 '</div>'+
             '</div>'+
